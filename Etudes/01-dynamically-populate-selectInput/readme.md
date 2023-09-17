@@ -1,6 +1,6 @@
 # Dynamic SelectInput Population
 
-##Problem:
+## Problem:
 
 Imagine you have a dataset, and you want to select specific values from it for further analysis or usage. For instance, you have sales data grouped by year and month, and you want to filter it by year. One approach is to manually type all the years into the user interface (UI) part of your application. However, this can be cumbersome, especially when you need to update it every year. Moreover, if you need to filter by a finer granularity, such as by day, this manual approach becomes impractical.
 
