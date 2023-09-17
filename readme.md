@@ -8,8 +8,8 @@ The list of "etudes" will be expanded as new problems and solutions arise.
 
 Contents:
 
-1. Dynamic Update of selectInput
-2. Issue of Re-rendering Outputs with Interconnected selectInput
+1. [Dynamic Update of selectInput](./Etudes/01-dynamically-populate-selectInput)
+2. [Issue of Re-rendering Outputs with Interconnected selectInput](./Etudes/02-dependant-filters)
 
 Contribution
 

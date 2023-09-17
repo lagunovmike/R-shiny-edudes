@@ -1,4 +1,4 @@
-# Dynamic SelectInput Population for Filtering Data
+# Dynamic SelectInput Population
 
 ##Problem:
 
