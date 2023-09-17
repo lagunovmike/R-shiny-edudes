@@ -1,5 +1,6 @@
 library(shiny)
 library(tidyverse)
+set.seed(123)
 
 ui <- fluidPage(
     selectInput(
@@ -18,7 +19,6 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
     generatedData <- reactive({
-        set.seed(123)
         n_rows <- 50
         df <- tibble(
             year        = sample(c(2021, 2022, 2023), size = n_rows, replace = TRUE),
