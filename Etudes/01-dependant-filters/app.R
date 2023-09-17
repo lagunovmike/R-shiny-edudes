@@ -47,12 +47,12 @@ server <- function(input, output, session) {
         )
         
         # Update selected_period
-        selected_period(selected)
+        selected_period(as.numeric(selected))
     })
     
     observeEvent(input$period, {
         selected_period_value <- req(input$period)
-        selected_period(selected_period_value)
+        selected_period(as.numeric(selected_period_value))
     })
     
     output$table <- renderTable({
@@ -65,5 +65,6 @@ server <- function(input, output, session) {
     })
 }
 
+options(shiny.reactlog = TRUE)
 # Run the application 
 shinyApp(ui = ui, server = server)
