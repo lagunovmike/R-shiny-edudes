@@ -18,6 +18,7 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
     generatedData <- reactive({
+        set.seed(123)
         n_rows <- 50
         df <- tibble(
             year        = sample(c(2021, 2022, 2023), size = n_rows, replace = TRUE),
@@ -59,7 +60,7 @@ server <- function(input, output, session) {
         selected_granularity <- req(input$granularity)
         selected_period_value <- req(selected_period())
         df <- generatedData()
-        message(toupper('LOGGER: Rendering a table'))
+        message('Rendering a table')
         df_filtered <- df |> filter(get(selected_granularity) %in% selected_period_value)
         df_filtered
     })
