@@ -3,6 +3,7 @@ library(tidyverse)
 set.seed(123)
 
 ui <- fluidPage(
+    # Render selectInput
     uiOutput('filter.year'),
     tableOutput('table')
 )
@@ -19,6 +20,7 @@ server <- function(input, output, session) {
         df
     })
     
+    # Initiate selectInput inside the renderUI
     output$filter.year <- renderUI({
         df <- generatedData()
         

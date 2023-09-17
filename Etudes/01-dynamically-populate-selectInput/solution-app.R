@@ -3,6 +3,7 @@ library(tidyverse)
 set.seed(123)
 
 ui <- fluidPage(
+    # Initiate the input in the ui part
     selectInput(
         inputId  = 'year',
         label    = 'Select year:',
